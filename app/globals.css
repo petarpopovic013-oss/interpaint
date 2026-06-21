@@ -255,7 +255,7 @@ img {
 .brand img {
   filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.35));
   height: auto;
-  width: 228px;
+  width: 194px;
 }
 
 .site-header nav {
@@ -1366,7 +1366,7 @@ img {
   }
 
   .brand img {
-    width: min(53vw, 248px);
+    width: min(45vw, 211px);
   }
 
   .mobile-menu summary {
