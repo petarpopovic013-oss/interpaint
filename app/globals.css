@@ -349,7 +349,7 @@ img {
 }
 
 .hero {
-  min-height: 770px;
+  min-height: max(760px, 100svh);
   overflow: hidden;
 }
 
@@ -386,16 +386,25 @@ img {
 }
 
 .hero-inner {
-  min-height: 770px;
+  column-gap: clamp(56px, 8vw, 150px);
+  display: grid;
+  grid-template-columns: minmax(0, 720px) minmax(320px, 380px);
+  grid-template-rows:
+    clamp(124px, 15svh, 168px)
+    auto
+    clamp(44px, 6.4svh, 74px)
+    auto
+    clamp(52px, 8svh, 86px);
+  min-height: max(760px, 100svh);
   position: relative;
 }
 
 .hero-copy {
   --reveal-delay: 120ms;
-  left: 0;
-  position: absolute;
-  top: 160px;
-  width: 720px;
+  grid-column: 1;
+  grid-row: 2;
+  position: relative;
+  width: min(100%, 720px);
   z-index: 2;
 }
 
@@ -420,14 +429,15 @@ img {
 
 .hero-text {
   --reveal-delay: 320ms;
+  align-self: center;
   color: rgba(255, 255, 255, 0.76);
   font-size: 17px;
   font-weight: 650;
+  grid-column: 2;
+  grid-row: 2;
   line-height: 1.62;
   margin: 0;
-  position: absolute;
-  right: 70px;
-  top: 330px;
+  position: relative;
   width: 380px;
   z-index: 2;
 }
@@ -435,11 +445,12 @@ img {
 .hero-stat {
   align-items: flex-start;
   --reveal-delay: 460ms;
-  bottom: 92px;
   display: flex;
   gap: 18px;
-  left: 0;
-  position: absolute;
+  grid-column: 1;
+  grid-row: 4;
+  justify-self: start;
+  position: relative;
   z-index: 2;
 }
 
@@ -462,11 +473,13 @@ img {
 }
 
 .hero-cards {
-  bottom: 76px;
+  align-self: end;
   display: grid;
   gap: 10px;
-  position: absolute;
-  right: 0;
+  grid-column: 2;
+  grid-row: 2 / 5;
+  justify-self: end;
+  position: relative;
   width: 360px;
   z-index: 2;
 }
@@ -497,6 +510,42 @@ img {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+@media (min-width: 1001px) and (max-width: 1180px) {
+  .hero {
+    min-height: max(720px, 100svh);
+  }
+
+  .hero-inner {
+    column-gap: clamp(36px, 5vw, 56px);
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+    grid-template-rows:
+      116px
+      auto
+      34px
+      auto
+      48px;
+    min-height: max(720px, 100svh);
+  }
+
+  .hero h1 {
+    font-size: clamp(72px, 8.4vw, 94px);
+    line-height: 1.02;
+    margin-bottom: 28px;
+  }
+
+  .hero-text {
+    width: min(100%, 340px);
+  }
+
+  .hero-cards {
+    width: min(100%, 340px);
+  }
+
+  .hero-cards span {
+    font-size: 15px;
+  }
 }
 
 .intro,
@@ -1197,6 +1246,7 @@ img {
   }
 
   .hero-inner {
+    display: block;
     min-height: 100svh;
     padding: 0 0 46px;
   }
