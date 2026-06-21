@@ -7,7 +7,7 @@ export function Header() {
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="Interpaint početna">
-        <Image src="/images/interpaint/logo.png" alt="Interpaint" width={134} height={80} priority />
+        <Image src="/images/Logo Trans.png" alt="Interpaint" width={500} height={500} priority />
       </Link>
       <nav aria-label="Glavna navigacija">
         {navItems.map((item) => (
@@ -44,7 +44,7 @@ export function Footer() {
     <footer className="footer section-dark">
       <div className="container footer-grid">
         <div>
-          <Image src="/images/interpaint/logo.png" alt="Interpaint" width={142} height={85} />
+          <Image src="/images/Logo Trans.png" alt="Interpaint" width={500} height={500} />
           <p>
             Interpaint je firma specijalizovana za usluge peskarenja, EcoBlasting obrade,
             antikorozivne i protivpožarne zaštite.

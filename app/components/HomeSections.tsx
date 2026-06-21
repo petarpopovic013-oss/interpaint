@@ -10,7 +10,22 @@ export function HomePage() {
     <>
       <section className="hero section-dark">
         <div className="hero-bg">
-          <Image src="/images/interpaint/project-hero.jpg" alt="" fill priority sizes="100vw" />
+          <Image
+            className="hero-bg-desktop"
+            src="/images/web wide.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+          />
+          <Image
+            className="hero-bg-mobile"
+            src="/images/Phone home.png"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+          />
         </div>
         <div className="container hero-inner">
           <div className="hero-copy">
@@ -32,7 +47,7 @@ export function HomePage() {
           <div className="hero-cards">
             <article><Truck size={21} /><span>Izlazak na teren</span></article>
             <article><Factory size={21} /><span>Industrijski projekti</span></article>
-            <article><ShieldCheck size={21} /><span>AKZ i PZ premazi</span></article>
+            <article><ShieldCheck size={21} /><span>AKZ i PZ prema standardima</span></article>
           </div>
         </div>
       </section>
