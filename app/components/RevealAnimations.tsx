@@ -4,10 +4,6 @@ import { useEffect } from "react";
 import { usePathname } from "next/navigation";
 
 const revealSelectors = [
-  ".hero-copy",
-  ".hero-text",
-  ".hero-stat",
-  ".hero-cards article",
   ".section-heading",
   ".image-stack img",
   ".service-row",
@@ -16,7 +12,6 @@ const revealSelectors = [
   ".partner-card",
   ".reference-list article",
   ".gallery-item",
-  ".page-hero-inner",
   ".service-card",
   ".seo-grid > img",
   ".related-grid a",

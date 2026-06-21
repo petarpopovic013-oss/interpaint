@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Interpaint Novi Sad - EcoBlasting, peskarenje, antikorozivna i protivpožarna zaštita metalnih, drvenih, betonskih i kamenih površina.",
   icons: {
-    icon: "/favico.ico",
+    icon: "/favicon.ico",
   },
 };
 

@@ -3,41 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight, Check, Mail, MapPin, Menu, Phone } from "lucide-react";
 import { contact, navItems } from "../data/site";
 
-export function Header() {
-  return (
-    <header className="site-header">
-      <Link className="brand" href="/" aria-label="Interpaint početna">
-        <Image src="/images/Logo Trans.png" alt="Interpaint" width={500} height={500} priority />
-      </Link>
-      <nav aria-label="Glavna navigacija">
-        {navItems.map((item) => (
-          <Link key={item.href} href={item.href}>
-            {item.label}
-          </Link>
-        ))}
-      </nav>
-      <div className="header-actions">
-        <a className="header-phone" href={contact.phoneHref}>
-          <Phone size={15} />
-          {contact.phone}
-        </a>
-        <details className="mobile-menu">
-          <summary aria-label="Otvori meni">
-            <Menu size={22} />
-          </summary>
-          <div>
-            {navItems.map((item) => (
-              <Link key={item.href} href={item.href}>
-                {item.label}
-              </Link>
-            ))}
-            <a href={contact.phoneHref}>{contact.phone}</a>
-          </div>
-        </details>
-      </div>
-    </header>
-  );
-}
+export { Header } from "./Header";
 
 export function Footer() {
   return (
