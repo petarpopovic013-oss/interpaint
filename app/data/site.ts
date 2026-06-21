@@ -1,5 +1,5 @@
 export const contact = {
-  phone: "+38163 326222",
+  phone: "+381 63 326222",
   phoneHref: "tel:+38163326222",
   email: "info@interpaint.rs",
   emailHref: "mailto:info@interpaint.rs",
